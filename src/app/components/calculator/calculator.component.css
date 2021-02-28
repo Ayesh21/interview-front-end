@@ -1,0 +1,38 @@
+.comp-calculator{
+  padding: 50px;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.calculator-prods{
+  padding: 150px;
+  font-family: 'Rajdhani', sans-serif;
+}
+.prod-cal-table{
+  width: 100%;
+  padding: 30px;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.txt-align-center{
+  text-align: center;
+}
+.field-values{
+  width: 80%;
+  border: 1px solid #ced4da;
+  font-size: medium;
+  padding-left: 20px;
+  color: #0d1b3eb3;
+}
+
+.title-total-value{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 40px;
+  font-weight: 400;
+  font-family: 'Rajdhani', sans-serif;
+}
+.img-prods{
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}

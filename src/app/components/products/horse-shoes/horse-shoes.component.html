@@ -1,0 +1,142 @@
+<div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+  <div class="app-header header-shadow">
+    <div class="app-header__logo">
+      <div class="logo-src"></div>
+      <div class="header__pane ml-auto">
+        <div>
+          <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="app-header__mobile-menu">
+      <div>
+        <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+        </button>
+      </div>
+    </div>
+    <div class="app-header__menu">
+                <span>
+                    <button type="button"
+                            class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                        <span class="btn-icon-wrapper">
+                            <i class="fa fa-ellipsis-v fa-w-6"></i>
+                        </span>
+                    </button>
+                </span>
+    </div>
+
+    <app-menubar></app-menubar>
+
+  </div>
+  <div class="app-main">
+    <div class="app-sidebar sidebar-shadow">
+      <div class="app-header__logo">
+        <div class="logo-src"></div>
+        <div class="header__pane ml-auto">
+          <div>
+            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner"></span>
+                                    </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="app-header__mobile-menu">
+        <div>
+          <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+          </button>
+        </div>
+      </div>
+      <div class="app-header__menu">
+                        <span>
+                            <button type="button"
+                                    class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                                <span class="btn-icon-wrapper">
+                                    <i class="fa fa-ellipsis-v fa-w-6"></i>
+                                </span>
+                            </button>
+                        </span>
+      </div>
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="app-main__outer">
+      <div class="app-main__inner">
+            <div class="row">
+              <div class="col-md-12">
+
+                <div class="main-card mb-3 card" >
+                  <div class="card-header">
+                    Horse Shoes
+                  </div>
+                  <div class="table-responsive">
+
+                    <table mat-table [dataSource]="dataSource" matSort
+                           class="align-middle mb-0 table table-borderless table-striped table-hover">
+
+                      <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header class="text-center"> ID</th>
+                        <td mat-cell *matCellDef="let row" class="text-center text-muted"> {{row.id}} </td>
+                      </ng-container>
+
+                      <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name</th>
+                        <td mat-cll *matCellDef="let row">
+                          <div class="widget-content p-0">
+                            <div class="widget-content-wrapper">
+                              <div class="widget-content-left mr-3">
+                                <div class="widget-content-left">
+                                  <img width="40" class="rounded-circle" src="./assets/images/horse-shoes.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="widget-content-left flex2">
+                                <div class="widget-heading">{{row.name}}</div>
+                                <div class="widget-subheading opacity-7">Description</div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </ng-container>
+
+                      <ng-container matColumnDef="quantity">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Quantity</th>
+                        <td mat-cell *matCellDef="let row"> {{row.quantity}} </td>
+                      </ng-container>
+
+                      <ng-container matColumnDef="amount">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Amount</th>
+                        <td mat-cell *matCellDef="let row"> {{row.value}} </td>
+                      </ng-container>
+
+                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                      <!-- Row shown when there is no matching data. -->
+                      <tr class="mat-row" *matNoDataRow>
+                        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+                      </tr>
+                    </table>
+
+                    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+<script type="text/javascript" src="../assets/scripts/main.js"></script>
