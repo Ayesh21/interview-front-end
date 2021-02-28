@@ -82,7 +82,7 @@
                   <div class="widget-subheading">Recently Added</div>
                 </div>
                 <div class="widget-content-right">
-                  <div class="widget-numbers text-white"><span>1000</span></div>
+                  <div class="widget-numbers text-white"><span>100</span></div>
                 </div>
               </div>
             </div>
@@ -95,7 +95,7 @@
                   <div class="widget-subheading">Total Amount</div>
                 </div>
                 <div class="widget-content-right">
-                  <div class="widget-numbers text-white"><span>100</span></div>
+                  <div class="widget-numbers text-white"><span>50</span></div>
                 </div>
               </div>
             </div>
@@ -108,7 +108,7 @@
                   <div class="widget-subheading">Total Amount</div>
                 </div>
                 <div class="widget-content-right">
-                  <div class="widget-numbers text-white"><span>100</span></div>
+                  <div class="widget-numbers text-white"><span>50</span></div>
                 </div>
               </div>
             </div>
@@ -117,8 +117,14 @@
         <div class="col-md-12">
           <div class="main-card mb-3 card">
             <div class="card-body">
-              <h5 class="card-title">Polar Chart</h5>
-              <canvas id="polar-chart"></canvas>
+              <canvas baseChart
+                      [data]="pieChartData"
+                      [labels]="pieChartLabels"
+                      [chartType]="pieChartType"
+                      [options]="pieChartOptions"
+                      [plugins]="pieChartPlugins"
+                      [legend]="pieChartLegend">
+              </canvas>
             </div>
           </div>
         </div>

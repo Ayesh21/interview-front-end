@@ -17,6 +17,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
+import {ChartsModule} from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -28,18 +29,19 @@ import { MenubarComponent } from './components/menubar/menubar.component';
     SidebarComponent,
     MenubarComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    RouterModule,
-    HttpClientModule,
-    MatInputModule,
-    MatDividerModule,
-    MatPaginatorModule,
-    MatTableModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        RouterModule,
+        HttpClientModule,
+        MatInputModule,
+        MatDividerModule,
+        MatPaginatorModule,
+        MatTableModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        ChartsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

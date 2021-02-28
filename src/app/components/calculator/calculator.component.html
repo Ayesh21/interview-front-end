@@ -73,14 +73,14 @@
 
     <div class="app-main__outer">
       <div class="app-main__inner">
-          <form [formGroup]="calculatorForm" (ngSubmit)="onSubmit()">
-            <div class="row">
+        <form [formGroup]="calculatorForm" (ngSubmit)="onSubmit()">
+          <div class="row">
 
             <div class="col-md-6">
               <div class="main-card mb-3 card">
                 <div class="card-body"><h5 class="card-title">Penguin Ears</h5>
                   <div>
-                    <div> <label>Unit Quantity</label></div>
+                    <div style="margin-top: 10px"><label>Unit Quantity</label></div>
                     <div class="input-group">
                       <div class="input-group-prepend">
                       <span class="input-group-text">
@@ -100,7 +100,7 @@
                              min="0" class="field-values">
                     </div>
                     <br>
-                    <div> <label >Carton Quantity</label></div>
+                    <div style="margin-top: 10px"><label>Carton Quantity</label></div>
                     <div class="input-group">
                       <div class="input-group-prepend">
                       <span class="input-group-text">
@@ -128,7 +128,7 @@
               <div class="main-card mb-3 card">
                 <div class="card-body"><h5 class="card-title">Horse Shoes</h5>
                   <div>
-                    <div> <label>Unit Quantity</label></div>
+                    <div style="margin-top: 10px"><label>Unit Quantity</label></div>
                     <div class="input-group">
                       <div class="input-group-prepend">
                       <span class="input-group-text">
@@ -143,11 +143,12 @@
                           </div>
                       </span>
                       </div>
-                      <input formControlName="qtyHorseUnit" matInput #input max="100" placeholder="Select Quantity" type="number"
+                      <input formControlName="qtyHorseUnit" matInput #input max="100" placeholder="Select Quantity"
+                             type="number"
                              min="0" class="field-values">
                     </div>
                     <br>
-                    <div> <label >Carton Quantity</label></div>
+                    <div style="margin-top: 10px"><label>Carton Quantity</label></div>
                     <div class="input-group">
                       <div class="input-group-prepend">
                       <span class="input-group-text">
@@ -171,22 +172,20 @@
               </div>
             </div>
 
-              <div class="txt-align-center">
-                <button class="mb-2 mr-2 btn-transition btn btn-outline-primary">Calculate
-                </button>
-              </div>
 
-              <div class="txt-align-center title-total-value card-shadow-success border mb-3 card card-body border-success">
-
-                <label ><h5> Total Amount</h5> </label>
-                <h5 class="card-title">
-                <input formControlName="totalValue">
-                </h5>
-              </div>
-
+            <div class="txt-align-center col-md-12" style="margin-top: 20px">
+              <button class="mb-2 mr-2 btn-transition btn btn-outline-primary" style="width: 100%">Calculate
+              </button>
             </div>
-          </form>
+
+            <div class="main-card col-md-12 card" style="margin-top: 20px">
+              <div class="card-body" style="text-align: center; margin-left: 20px">
+                <label><h5><input formControlName="totalValue" style="border: none; color: rgba(13, 27, 62, 0.7); font-size: larger;"></h5></label>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
-      <script type="text/javascript" src="../assets/scripts/main.js"></script>
+  <script type="text/javascript" src="../assets/scripts/main.js"></script>
